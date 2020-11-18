@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.0.0
+    steps:
+      - checkout
+      - run:
+          name: "Install zoweCLI"
+          command: sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
+      - run:
+          name: "Install Package"
+          command: npm install .
+      - run:
+          name: "Create Zowe Profiles"
+          command: zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
+      - run:
+          name: "Run Script "
+          command: npm run build --mainframeID=$user
