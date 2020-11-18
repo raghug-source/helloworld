@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "upload": "zowe zos-files upload dir-to-pds \"./cobol\" \"rgopalk.rag.cobol\"",     
-    "build": "zowe jobs submit ds \"rgopalk.rag.jcl(hello)\" -d . --rfj ",
-    "start": "npm run upload && npm run build"
+    "compile": "zowe jobs submit ds \"rgopalk.rag.jcl(hello)\" -d . --rfj ",
+    "runpgm": "zowe jobs submit ds \"rgopalk.rag.jcl(run)\" -d . --rfj ",
+    "build": "npm run upload && npm run compile && npm run runpgm"
   },
   "author": "",
   "license": "ISC"
