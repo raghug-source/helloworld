@@ -1,0 +1,15 @@
+{
+  "name": "raghugopalkrishnan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsc --pretty",
+    "genjcl": "node ./scripts/lib/genjcl",
+    "upload": "zowe files upload ftds \"./rgopalk/rag/cobol/hello.cbl\" \"rgopalk.rag.cobol(hello)\"", 
+    "build": "zowe jobs submit lf \"./rgopalk/rag/jcl/hello.jcl\" --directory \"./output\"",
+    "start": "npm run upload && npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}
