@@ -6,7 +6,7 @@
   "scripts": {
     "upload": "zowe zos-files upload dir-to-pds \"./cobol\" \"rgopalk.rag.cobol\"",     
     "compile": "zowe jobs submit ds \"rgopalk.rag.jcl(hello)\" -d . --rfj ",
-    "runpgm": "zowe jobs submit ds \"rgopalk.rag.jcl(run)\" -d . --rfj ",
+    "runpgm": "zowe jobs submit ds \"rgopalk.jcl.cntl(run)\" -d . --rfj ",
     "build": "npm run upload && npm run compile && npm run runpgm"
   },
   "author": "",
