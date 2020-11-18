@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "upload": "zowe files upload ftds \"./rgopalk/rag/cobol/hello.cbl\" \"rgopalk.rag.cobol(hello)\"", 
-    "build": "zowe jobs submit lf \"./rgopalk/rag/jcl/hello.jcl\" --directory \"./output\"",
+    "upload": "zowe zos-files upload dir-to-pds \"./cobol\" \"rgopalk.rag.cobol\"",     
+    "build": "zowe jobs submit ds \"rgopalk.rag.jcl(hello)\" -d . --rfj ",
     "start": "npm run upload && npm run build"
   },
   "author": "",
