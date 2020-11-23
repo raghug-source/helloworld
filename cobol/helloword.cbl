@@ -1,6 +1,6 @@
   IDENTIFICATION DIVISION.
 	PROGRAM-ID. HelloWorld.
-	AUTHOR. jiuweigui.
+	AUTHOR. raghu.
 	PROCEDURE DIVISION.
 	DISPLAY "Hello World!".
 	STOP RUN.
