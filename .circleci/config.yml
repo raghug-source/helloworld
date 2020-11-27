@@ -8,7 +8,8 @@ jobs:
       - run:
           name: "Install Package"
           command: |
-            sudo pip install zowe
+            sudo pip install pipenv
+            pipenv install zowe
       
       - run:
           name: "Run Script "
