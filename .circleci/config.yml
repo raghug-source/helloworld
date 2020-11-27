@@ -33,6 +33,6 @@ jobs:
       - run:
           name: "Check directory"
           command: |
-            ls /home/circleci/project
+            ls /home/circleci/project/raghu
             
 
