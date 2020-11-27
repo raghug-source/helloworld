@@ -12,5 +12,5 @@ jobs:
       
       - run:
           name: "Run Script "
-          command: pipenv run python manage.py
+          command: pipenv run python manage.py $host $port $user $password
 
