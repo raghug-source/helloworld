@@ -20,7 +20,7 @@ jobs:
             sudo add-apt-repository universe
             sudo apt-get update
             sudo apt install python3-pip
-            sudo pip install pipenv
+            sudo pip3 install pipenv
             pipenv install
       - run:
           name: 'Install git module'
