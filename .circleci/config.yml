@@ -6,13 +6,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Install zoweCLI"
-          command: sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
-      - run:
           name: "Install Package"
           command: |
-            sudo pip install pipenv
-            pipenv install
+            sudo pip install zowe
       - run:
           name: "Create Zowe Profiles"
           command: zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
