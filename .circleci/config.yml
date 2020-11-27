@@ -9,9 +9,7 @@ jobs:
           name: "Install Package"
           command: |
             sudo pip install zowe
-      - run:
-          name: "Create Zowe Profiles"
-          command: zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
+      
       - run:
           name: "Run Script "
           command: pipenv run python manage.py
