@@ -11,10 +11,10 @@ jobs:
       - run:
           name: "Install Package"
           command: npm install .    
-      - run:
-          name: "Install Pipenv"
-          command: |
-            sudo pip install pipenv
+      - run: npm --version
+      - run: python --version
+      - run: node --version
+          
       
       - run:
           name: "Run Script "
