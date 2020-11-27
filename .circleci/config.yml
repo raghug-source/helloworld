@@ -17,6 +17,8 @@ jobs:
       - run:
           name: 'Install PIP'
           command: |
+            sudo pip install pipenv
+            pipenv install
             sudo add-apt-repository universe
             sudo apt-get update
             sudo apt install python3-pip
@@ -27,5 +29,5 @@ jobs:
       
       - run:
           name: "Run Script "
-          command: pipenv run python manage.py $host $port $user $password
+          command: pipenv run python manage.py
 
