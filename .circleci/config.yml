@@ -6,11 +6,15 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Install ZoweCLI"
+          command: sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
+      - run:
           name: "Install Package"
+          command: npm install .    
+      - run:
+          name: "Install Pipenv"
           command: |
-            sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
             sudo pip install pipenv
-            
       
       - run:
           name: "Run Script "
