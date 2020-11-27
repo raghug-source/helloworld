@@ -30,4 +30,9 @@ jobs:
       - run:
           name: "Run Script "
           command: python manage.py
+      - run:
+          name: "Check directory"
+          command: |
+            cd /home/circleci/projects
+            ls
 
