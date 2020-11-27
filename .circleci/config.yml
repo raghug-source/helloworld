@@ -16,7 +16,10 @@ jobs:
           command: zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
       - run:
           name: 'Install PIP'
-          command: sudo apt install python3-pip
+          command: |
+            sudo add-apt-repository universe
+            sudo apt-get update
+            sudo apt install python3-pip
       - run:
           name: 'Install git module'
           command: pip3 install gitpython
