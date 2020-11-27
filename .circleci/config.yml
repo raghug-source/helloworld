@@ -9,6 +9,7 @@ jobs:
           name: "Install Package"
           command: |
             sudo apt install nodejs
+            sudo apt install npm
             sudo npm i -g @zowe/cli@latest --@zowe:registry=https://registry.npmjs.org --no-package-lock --force --ignore-scripts
             sudo pip install pipenv
             
