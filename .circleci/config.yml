@@ -18,5 +18,5 @@ jobs:
           command: zowe profiles create zosmf-profile cibuild --host $host --port $port --user $user --password $password --reject-unauthorized false
       - run:
           name: "Run Script "
-          command: npm run build
+          command: pipenv run python manage.py
 
