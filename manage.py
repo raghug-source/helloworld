@@ -1,5 +1,6 @@
 import os
 import sys
+from zowe.zos_console_for_zowe_sdk import Console
 print('Hello World!')
-command = "zowe --version"
-os.system(command)
+host = $host
+print(host)
